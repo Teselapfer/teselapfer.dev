@@ -1,11 +1,11 @@
 import { Link } from "react-router";
 
-export function Welcome() {
+export default function Profile() {
   return (
     <div>
-      <h1>Top Page</h1>
+      <h1>Profile</h1>
       <br />
-      <Link to="/profile">Profile</Link>
+      <Link to="/">Top</Link>
       <br />
       <Link to="/blog">Blog</Link>
       <br />
