@@ -1,0 +1,20 @@
+.footerRoot{
+  display: flex;
+  color: #6b7280;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.copyRight{
+  padding: 0 8px;
+  font-size: small;
+}
+
+.snsLink{
+  padding: 0 8px;
+}
+
+.changeTheme{
+  padding: 0 8px;
+}

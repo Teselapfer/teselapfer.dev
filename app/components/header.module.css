@@ -1,26 +1,27 @@
 .headerRoot {
   display: flex;
   width: 100%;
-  background-color: #fdf8f2;
+  /* background-color: #fdf8f2; */
   align-items: center;
+  justify-content: space-between;
   padding: 16px 0;
+  margin-bottom: 40px;
 }
 
 .navTitle {
   color: #6b7280;
-  margin-left: 0;
   font-weight: 500;
-  padding: 8px;
+  padding: 0 8px;
 }
 
 .navItems {
-  margin: 0 0 0 auto;
+  
 }
 
 .navItem{
   color: #6b7280;
   font-weight: 500;
-  padding: 8px;
+  padding: 0 8px;
 }
 
 .navItem:hover {
