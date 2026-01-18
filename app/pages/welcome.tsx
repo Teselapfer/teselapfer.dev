@@ -1,9 +1,11 @@
-import { Link } from "react-router";
+import ContentArea from "~/components/ContentArea";
 
 export function Welcome() {
   return (
     <div>
-      <h1>Top Page</h1>
+      <ContentArea>
+        <h1>Top Page</h1>
+      </ContentArea>
     </div>
   );
 }

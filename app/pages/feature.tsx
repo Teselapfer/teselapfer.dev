@@ -1,9 +1,11 @@
-import { Link } from "react-router";
+import ContentArea from "~/components/ContentArea";
 
 export default function Feature() {
   return (
     <div>
-      <h1>Feature</h1>
+      <ContentArea>
+        <h1>Feature</h1>
+      </ContentArea>
     </div>
   );
 }

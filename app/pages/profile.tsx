@@ -1,9 +1,11 @@
-import { Link } from "react-router";
+import ContentArea from "~/components/ContentArea";
 
 export default function Profile() {
   return (
     <div>
-      <h1>Profile</h1>
+      <ContentArea>
+        <h1>Profile</h1>
+      </ContentArea>
     </div>
   );
 }
