@@ -1,0 +1,29 @@
+.sectionContainer {
+  margin: 64px 0;
+  margin-bottom: 48px;
+}
+
+.Title {
+  border-left: 4px solid #e9a14a;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #374151;
+  padding-left: 12px;
+}
+
+.sectionTitleEng {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #374151;
+  padding-left: 12px;
+}
+
+.sectionContent {
+  padding-left: 16px;
+  color: #4b5563;
+}
