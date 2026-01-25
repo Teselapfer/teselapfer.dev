@@ -1,4 +1,5 @@
 import { NavLink } from "react-router";
+import dark from "../assets/dark_mode.svg";
 import styles from "./header.module.css";
 
 const headerItems = [
@@ -20,6 +21,9 @@ const Header = () => {
               {item.name}
             </NavLink>
           ))}
+          <div className={styles.changeTheme}>
+            <img src={dark} alt="dark-mode" />
+          </div>
         </div>
       </div>
     </>

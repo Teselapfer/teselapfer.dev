@@ -8,12 +8,7 @@ const Header = () => {
         <div className={styles.copyRight}>
           ©2025 Teselapfer All rights reserved.
         </div>
-        <div className={styles.snsLink}>
-          mail
-        </div>
-        <div className={styles.changeTheme}>
-          dark
-        </div>
+        <div className={styles.snsLink}>mail</div>
       </div>
     </>
   );

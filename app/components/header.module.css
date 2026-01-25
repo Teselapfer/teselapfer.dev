@@ -13,17 +13,32 @@
   font-weight: 500;
   padding: 0 8px;
 }
-
-.navItems {
-  
+.navTitle:hover {
+  color: #f8d4a8;
 }
 
-.navItem{
+.navItems {
+  display: flex;
+}
+
+.navItem {
   color: #6b7280;
   font-weight: 500;
   padding: 0 8px;
 }
-
 .navItem:hover {
   color: #f8d4a8;
+}
+
+.changeTheme {
+  object-fit: cover;
+  border: 2px solid #6b7280;
+  border-radius: 8px;
+  padding: 0 8px;
+  margin: 0 8px;
+}
+.changeTheme:hover {
+  border: 2px solid #f8d4a8;
+  filter: brightness(0) saturate(100%) invert(84%) sepia(2%) saturate(3976%)
+    hue-rotate(343deg) brightness(92%) contrast(122%);
 }

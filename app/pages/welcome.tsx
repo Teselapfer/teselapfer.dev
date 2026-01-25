@@ -7,7 +7,7 @@ import { NavLink } from "react-router";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Teselapfer Portfolio" },
-    { name: "description", content: "Welcome to Teselapfer's portfolio!" },
+    { name: "description", content: "Welcome to teselapfer.dev!" },
   ];
 }
 
