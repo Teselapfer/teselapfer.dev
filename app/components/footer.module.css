@@ -12,6 +12,18 @@
   font-size: small;
 }
 
-.snsLink {
+.snsLinks {
+  display: flex;
   padding: 0 8px;
+}
+
+.link {
+  filter: brightness(0) saturate(100%) invert(48%) sepia(11%) saturate(554%)
+    hue-rotate(182deg) brightness(87%) contrast(81%);
+  border-radius: 6px;
+  padding: 8px 8px;
+}
+.link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  filter: brightness(0.5);
 }
