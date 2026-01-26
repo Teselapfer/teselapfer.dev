@@ -24,7 +24,7 @@
 .navItem {
   color: #6b7280;
   font-weight: 500;
-  padding: 0 8px;
+  padding: 8px 8px;
 }
 .navItem:hover {
   color: #f8d4a8;
@@ -32,13 +32,13 @@
 
 .changeTheme {
   object-fit: cover;
-  border: 2px solid #6b7280;
-  border-radius: 8px;
-  padding: 0 8px;
+  filter: brightness(0) saturate(100%) invert(48%) sepia(11%) saturate(554%)
+    hue-rotate(182deg) brightness(87%) contrast(81%);
+  border-radius: 6px;
+  padding: 8px 8px;
   margin: 0 8px;
 }
 .changeTheme:hover {
-  border: 2px solid #f8d4a8;
-  filter: brightness(0) saturate(100%) invert(84%) sepia(2%) saturate(3976%)
-    hue-rotate(343deg) brightness(92%) contrast(122%);
+  background-color: rgba(0, 0, 0, 0.05);
+  filter: brightness(0.5);
 }

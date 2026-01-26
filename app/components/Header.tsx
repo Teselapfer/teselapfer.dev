@@ -1,5 +1,6 @@
 import { NavLink } from "react-router";
-import dark from "../assets/dark_mode.svg";
+import dark from "../assets/mode_moon.svg";
+import light from "../assets/mode_sun.svg";
 import styles from "./header.module.css";
 
 const headerItems = [
