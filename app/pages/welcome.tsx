@@ -16,11 +16,6 @@ export default function Welcome() {
     <div>
       <ContentArea>
         <div className={styles.head}>Welcome to teselapfer.dev!</div>
-        <div className={styles.description}>
-          初めまして。
-          <br />
-          デザインの視点を活かした創作活動を行っています。
-        </div>
 
         <Section title="お知らせ" titleEng="NEWS">
           <ul className={styles.newsList}>

@@ -1,0 +1,27 @@
+.profile {
+  margin: 0 auto;
+}
+
+.head {
+  display: flex;
+  font-size: 3em;
+  align-items: center;
+  margin: 16px 0 24px;
+}
+
+.icon {
+  width: 10%;
+}
+.icon img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.name {
+  margin-left: 24px;
+}
+
+.description {
+  margin: 16px 0 24px;
+  color: #4b5563;
+}
