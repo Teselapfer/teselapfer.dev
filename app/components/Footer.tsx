@@ -19,7 +19,7 @@ const Header = () => {
           <Link to="" className={styles.link}>
             <img src={instagram} alt="instagram" />
           </Link>
-          <Link to="" className={styles.link}>
+          <Link to="https://x.com/teselapfer" className={styles.link}>
             <img src={twitter} alt="twitter" />
           </Link>
           <Link

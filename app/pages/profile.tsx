@@ -20,7 +20,10 @@ export default function Profile() {
             <div className={styles.icon}>
               <img src={donky} alt="Teselapfer" />
             </div>
-            <div className={styles.name}>Teselapfer</div>
+            <div className={styles.name}>
+              <div className={styles.nameEng}>Teselapfer</div>
+              <div className={styles.nameJp}>テセラプファー・テセラファー</div>
+            </div>
           </div>
           <div className={styles.description}>
             初めまして！
@@ -28,9 +31,11 @@ export default function Profile() {
             名前は読みにくいと思うので”えせる”と呼んでください。
             <br />
             京都で活動しています。
+            <br />
+            興味を持ったことにいろいろ手を出してみる、一歩を踏み出すのが取り柄の人間です。
           </div>
 
-          <Section title="好きなこと・もの" titleEng="LIKE">
+          <Section title="好物" titleEng="LIKE">
             <ul className={styles.newsList}>
               <li>- 寺社仏閣巡り</li>
               <li>- ゲーム</li>
@@ -40,20 +45,35 @@ export default function Profile() {
 
           <Section title="経歴" titleEng="CAREER">
             <div>
-              <ul className={styles.newsList}>
-                <li>2025/03 松江工業高等専門学校を卒業</li>
-                <li>2025/04 大阪のIT企業へ入社</li>
-              </ul>
+              プログラミングをしてみたいと思い、高専で情報工学を学びました。
+              <br />
+              学生生活の中では、MMDの動画制作やデザインの勉強をしていました。
+              <br />
+              ゲーム工学の研究室に所属していたため、ボードゲームのAIについて研究をしていました。
             </div>
           </Section>
 
           <Section title="技術" titleEng="TECH">
             <div>
+              主にWeb分野の技術を身に着けています。
               <ul className={styles.newsList}>
-                <li>フロントエンド・・・ React, FastAPI(勉強中)</li>
-                <li>バックエンド・・・Laravel, Ruby on Rails, Go(勉強中)</li>
-                <li>インフラ・・・Azure(1度だけ)</li>
+                <li>- フロントエンド・・・ React</li>
+                <li>
+                  - バックエンド・・・ Laravel、 Ruby on Rails、
+                  FastAPI(勉強中)、Go(勉強中)
+                </li>
+                <li>- インフラ・・・ Azure(初心者)</li>
               </ul>
+            </div>
+          </Section>
+
+          <Section title="連絡" titleEng="CONTACT">
+            <div>
+              SNSのアカウントは連絡をいただいても反応がないことが多いです。
+              <br />
+              お仕事の依頼や相談などがあれば、お気軽に以下のメールアドレスより連絡ください。
+              <br />
+              example[at]example.com
             </div>
           </Section>
         </div>

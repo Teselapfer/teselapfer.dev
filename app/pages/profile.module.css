@@ -20,6 +20,12 @@
 .name {
   margin-left: 24px;
 }
+.nameEng {
+}
+.nameJp {
+  font-size: medium;
+  margin: 0 auto;
+}
 
 .description {
   margin: 16px 0 24px;
