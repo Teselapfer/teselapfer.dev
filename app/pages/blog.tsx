@@ -1,8 +1,8 @@
 import ContentArea from "~/components/ContentArea";
 import type { Route } from "./+types/blog";
+import { getPosts } from "../utils/post";
+import BlogCard from "~/components/BlogCard";
 import styles from "./blog.module.css";
-import { Link } from "react-router";
-import { getPosts, type Post } from "../utils/post";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -12,37 +12,19 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Blog() {
-  const posts = getPosts();
+  const allPosts = getPosts();
+
+  // 【将来の拡張ポイント】ここで filter や slice を行います
+  // 例：日付の新しい順に並び替える
+  const displayedPosts = allPosts.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
 
   return (
     <ContentArea>
       <div className={styles.grid}>
-        {posts.map((post: Post) => (
-          <Link
-            key={post.slug}
-            to={`/blog/${post.slug}`}
-            className={styles.card}
-          >
-            {/* サムネイルがない場合のフォールバック */}
-            <div className={styles.imageWrapper}>
-              <img
-                src={post.thumbnail || "/assets/default-thumb.png"}
-                alt={post.title}
-              />
-            </div>
-
-            <div className={styles.info}>
-              <span className={styles.date}>{post.date}</span>
-              <h2 className={styles.title}>{post.title}</h2>
-              <div className={styles.tags}>
-                {post.tags.map((tag) => (
-                  <span key={tag} className={styles.tag}>
-                    #{tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </Link>
+        {displayedPosts.map((post) => (
+          <BlogCard key={post.slug} post={post} />
         ))}
       </div>
     </ContentArea>

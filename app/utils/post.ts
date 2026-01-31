@@ -35,7 +35,7 @@ function parseMarkdown(rawContent: string) {
         data[key.trim()] = value
           .replace(/[\[\]]/g, "")
           .split(",")
-          .map((s) => s.trim());
+          .map((s) => s.trim().replace(/['"]/g, ""));
       } else {
         data[key.trim()] = value;
       }

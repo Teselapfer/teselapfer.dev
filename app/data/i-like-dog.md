@@ -2,7 +2,7 @@
 title: "I like dog"
 date: "2026-01-25"
 tags: ["React", "WebDesign"]
-thumbnail: "/public/thumbnails/blog-thumb.jpg"
+thumbnail: "/public/thumbnails/IMG_2870.JPEG"
 ---
 
 本文はここから書く。画像もいける。
