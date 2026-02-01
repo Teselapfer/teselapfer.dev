@@ -45,17 +45,17 @@ export default function Profile() {
 
           <Section title="経歴" titleEng="CAREER">
             <div>
-              プログラミングをしてみたいと思い、高専で情報工学を学びました。
+              プログラミングをしてみたいと思い、高専で情報工学を専攻しました。
               <br />
-              学生生活の中では、MMDの動画制作やデザインの勉強をしていました。
+              学生の間はMMDの動画制作やデザインの勉強をしており、学内のポスターやイベントのOPムービーなどを作りました。
               <br />
-              ゲーム工学の研究室に所属していたため、ボードゲームのAIについて研究をしていました。
+              研究活動ではゲーム工学の研究室に所属していたため、ボードゲームのAIについて研究をしていました。
             </div>
           </Section>
 
           <Section title="技術" titleEng="TECH">
             <div>
-              主にWeb分野の技術を身に着けています。
+              主にWebの技術を身に着けています。
               <ul className={styles.newsList}>
                 <li>- フロントエンド・・・ React</li>
                 <li>
@@ -71,7 +71,7 @@ export default function Profile() {
             <div>
               SNSのアカウントは連絡をいただいても反応がないことが多いです。
               <br />
-              お仕事の依頼や相談などがあれば、お気軽に以下のメールアドレスより連絡ください。
+              お仕事の依頼や相談などがあれば、お気軽に以下のメールアドレスよりご連絡ください。
               <br />
               example[at]example.com
             </div>
