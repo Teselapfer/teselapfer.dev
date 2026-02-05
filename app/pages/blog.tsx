@@ -38,6 +38,7 @@ export default function Blog() {
 
   return (
     <ContentArea>
+      <div className={styles.head}>Blog</div>
       <div className={styles.grid}>
         {displayedPosts.map((post) => (
           <BlogCard key={post.slug} post={post} />

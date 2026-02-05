@@ -1,5 +1,5 @@
-import ContentArea from "~/components/ContentArea";
 import type { Route } from "./+types/profile";
+import ContentArea from "~/components/ContentArea";
 import Section from "~/components/Section";
 import donky from "../assets/roba_plane.svg";
 import styles from "./profile.module.css";

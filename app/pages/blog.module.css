@@ -1,3 +1,8 @@
+.head {
+  font-size: 3em;
+  margin: 0 24px;
+}
+
 .grid {
   display: grid;
   /* 1列あたり最小200px〜最大1fr。最大4列にするために math を使うか、
@@ -7,10 +12,9 @@
   padding: 2rem 0;
 }
 
-/* 4行に抑えるためのコンテナ制限（任意） */
 .gridContainer {
   max-height: calc((カードの高さ + gap) * 4);
-  overflow: hidden; /* 溢れた分を隠す場合 */
+  overflow: hidden;
 }
 
 .pagination {
@@ -43,7 +47,7 @@
 }
 
 .activePage {
-  background: #333; /* 好きなアクセントカラーに */
+  background: #333;
   color: white;
   border-color: #333;
 }
