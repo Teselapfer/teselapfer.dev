@@ -1,5 +1,5 @@
 ---
-title: "Good bye"
+title: "犬が好き"
 date: "2026-01-25"
 tags: ["React", "WebDesign"]
 thumbnail: "/thumbnails/IMG_2870.JPEG"
