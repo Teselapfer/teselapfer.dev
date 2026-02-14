@@ -22,6 +22,7 @@
     hue-rotate(182deg) brightness(87%) contrast(81%);
   border-radius: 6px;
   padding: 8px 8px;
+  transition: background-color 0.3s ease;
 }
 .link:hover {
   background-color: rgba(0, 0, 0, 0.05);

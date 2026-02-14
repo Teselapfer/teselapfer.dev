@@ -13,12 +13,23 @@ const Header = () => {
   return (
     <>
       <div className={styles.headerRoot}>
-        <div className={styles.navTitle}>
-          <NavLink to={"/"}>Top</NavLink>
-        </div>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `${styles.navLink} ${isActive ? styles.navLinkActive : ""}`
+          }
+        >
+          Top
+        </NavLink>
         <div className={styles.navItems}>
           {headerItems.map((item) => (
-            <NavLink key={item.path} to={item.path} className={styles.navItem}>
+            <NavLink
+              key={item.path}
+              to={item.path}
+              className={({ isActive }) =>
+                `${styles.navLink} ${isActive ? styles.navLinkActive : ""}`
+              }
+            >
               {item.name}
             </NavLink>
           ))}
