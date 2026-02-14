@@ -9,8 +9,6 @@
 
 .grid {
   display: grid;
-  /* 1列あたり最小200px〜最大1fr。最大4列にするために math を使うか、
-     親要素の幅(1000px)に対して調整します */
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1.5rem;
   padding: 2rem 0;

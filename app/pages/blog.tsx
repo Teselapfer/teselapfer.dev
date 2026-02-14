@@ -1,7 +1,7 @@
-import { useSearchParams } from "react-router";
-import ContentArea from "~/components/ContentArea";
 import type { Route } from "./+types/blog";
+import { useSearchParams } from "react-router";
 import { getPosts } from "../utils/post";
+import ContentArea from "~/components/ContentArea";
 import BlogCard from "~/components/BlogCard";
 import styles from "./blog.module.css";
 

@@ -1,5 +1,5 @@
-import ContentArea from "~/components/ContentArea";
 import type { Route } from "./+types/feature";
+import ContentArea from "~/components/ContentArea";
 import Section from "~/components/Section";
 import styles from "./feature.module.css";
 

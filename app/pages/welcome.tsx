@@ -1,8 +1,10 @@
 import type { Route } from "../+types/root";
+import { NavLink } from "react-router";
 import ContentArea from "~/components/ContentArea";
 import Section from "~/components/Section";
+import BlogCard from "~/components/BlogCard";
+import { getPosts } from "../utils/post";
 import styles from "./welcome.module.css";
-import { NavLink } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -12,6 +14,11 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Welcome() {
+  const allPosts = getPosts();
+  const latestPosts = allPosts
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 4);
+
   return (
     <div>
       <ContentArea>
@@ -26,6 +33,11 @@ export default function Welcome() {
         <Section title="最新の記事" titleEng="LATEST POSTS">
           <div>
             技術的な備忘録や日々の制作のこと、何気ない独り言を綴っています。
+          </div>
+          <div className={styles.grid}>
+            {latestPosts.map((post) => (
+              <BlogCard key={post.slug} post={post} />
+            ))}
           </div>
           <NavLink to={"/blog"} className={styles.link}>
             記事一覧を見る →
