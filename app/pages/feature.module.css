@@ -1,4 +1,13 @@
+.feature {
+  margin: 0 auto;
+}
+
 .head {
   font-size: 3em;
-  margin: 0 0 16px 24px;
+  margin: 0 0 16px 0;
+}
+
+.description {
+  margin: 16px 0 24px;
+  color: #4b5563;
 }

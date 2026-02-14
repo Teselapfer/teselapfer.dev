@@ -14,27 +14,13 @@ export default function Feature() {
   return (
     <div>
       <ContentArea>
-        <div className={styles.profile}>
+        <div className={styles.feature}>
           <div className={styles.head}>Feature</div>
           <div className={styles.description}>
-            初めまして！
-            <br />
-            名前は読みにくいと思うので”えせる”と呼んでください。
-            <br />
-            京都で活動しています。
-            <br />
-            興味を持ったことにいろいろ手を出してみる、一歩を踏み出すのが取り柄の人間です。
+            このサイトに関する情報をまとめています。
           </div>
 
-          <Section title="好物" titleEng="LIKE">
-            <ul className={styles.newsList}>
-              <li>- 寺社仏閣巡り</li>
-              <li>- ゲーム</li>
-              <li>- 動物</li>
-            </ul>
-          </Section>
-
-          <Section title="経歴" titleEng="CAREER">
+          <Section title="更新履歴" titleEng="HISTORY">
             <div>
               プログラミングをしてみたいと思い、高専で情報工学を専攻しました。
               <br />
@@ -55,16 +41,6 @@ export default function Feature() {
                 </li>
                 <li>- インフラ・・・ Azure(初心者)</li>
               </ul>
-            </div>
-          </Section>
-
-          <Section title="連絡" titleEng="CONTACT">
-            <div>
-              SNSのアカウントは連絡をいただいても反応がないことが多いです。
-              <br />
-              お仕事の依頼や相談などがあれば、お気軽に以下のメールアドレスよりご連絡ください。
-              <br />
-              example[at]example.com
             </div>
           </Section>
         </div>

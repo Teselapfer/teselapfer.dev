@@ -39,6 +39,11 @@ export default function Blog() {
   return (
     <ContentArea>
       <div className={styles.head}>Blog</div>
+      <div className={styles.description}>
+        技術的な備忘録や日々の制作のこと、何気ない独り言を綴っています。
+        <br />
+        不定期更新ですが、気が向いたときに覗いてみてください。
+      </div>
       <div className={styles.grid}>
         {displayedPosts.map((post) => (
           <BlogCard key={post.slug} post={post} />
