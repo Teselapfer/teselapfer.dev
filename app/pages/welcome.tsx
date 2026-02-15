@@ -13,6 +13,12 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
+const latestVideo = {
+  thumbnail: "https://img.youtube.com/vi/QhVEg7kbXoY/maxresdefault.jpg",
+  url: "https://www.youtube.com/watch?v=QhVEg7kbXoY",
+  id: "QhVEg7kbXoY",
+};
+
 export default function Welcome() {
   const allPosts = getPosts();
   const latestPosts = allPosts
@@ -39,16 +45,25 @@ export default function Welcome() {
               <BlogCard key={post.slug} post={post} />
             ))}
           </div>
-          <NavLink to={"/blog"} className={styles.link}>
-            記事一覧を見る →
-          </NavLink>
+          <div className={styles.linkWrapper}>
+            <NavLink to={"/blog"} className={styles.link}>
+              記事一覧を見る →
+            </NavLink>
+          </div>
         </Section>
 
-        <Section title="最新の動画" titleEng="LATEST WORKS">
+        <Section title="最新の動画" titleEng="LATEST MOVIE">
           <div>制作した動画です。</div>
-          <NavLink to={"/blog"} className={styles.link}>
-            Youtubeを見る →
-          </NavLink>
+          <div className={styles.videoSectionCenter}>
+            <div className={styles.videoPlayerWrapperLarge}>
+              <iframe
+                src={`https://www.youtube.com/embed/${latestVideo.id}`}
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
         </Section>
 
         <Section title="激写！山口の暮らし" titleEng="PHOTOS">
