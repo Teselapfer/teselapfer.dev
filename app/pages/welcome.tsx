@@ -53,7 +53,7 @@ export default function Welcome() {
         </Section>
 
         <Section title="最新の動画" titleEng="LATEST MOVIE">
-          <div>制作した動画です。</div>
+          <div>制作した動画はYouTubeで公開しています。</div>
           <div className={styles.videoSectionCenter}>
             <div className={styles.videoPlayerWrapperLarge}>
               <iframe

@@ -73,7 +73,7 @@ export default function Profile() {
               <br />
               お仕事の依頼や相談などがあれば、お気軽に以下のメールアドレスよりご連絡ください。
               <br />
-              example[at]example.com
+              teselapfer[at]gmail.com
             </div>
           </Section>
         </div>
