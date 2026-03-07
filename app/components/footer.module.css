@@ -3,18 +3,31 @@
   color: #6b7280;
   align-items: center;
   justify-content: space-between;
-  margin-top: 40px;
-  padding: 16px 0;
+  margin-top: 60px;
+  padding: 24px 0;
+  border-top: 1px solid #f1f5f9;
+}
+
+.copyRight,
+.themeWrapper {
+  flex: 1;
 }
 
 .copyRight {
-  padding: 0 8px;
   font-size: small;
+  padding-left: 8px;
 }
 
 .snsLinks {
   display: flex;
-  padding: 0 8px;
+  justify-content: center;
+  flex: 2;
+}
+
+.themeWrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 8px;
 }
 
 .link {
@@ -25,6 +38,21 @@
   transition: background-color 0.3s ease;
 }
 .link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  filter: brightness(0.5);
+}
+
+.changeTheme {
+  object-fit: cover;
+  filter: brightness(0) saturate(100%) invert(48%) sepia(11%) saturate(554%)
+    hue-rotate(182deg) brightness(87%) contrast(81%);
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 8px;
+  margin: 0 8px 0 16px;
+  transition: background-color 0.3s ease;
+}
+.changeTheme:hover {
   background-color: rgba(0, 0, 0, 0.05);
   filter: brightness(0.5);
 }
