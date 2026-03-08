@@ -4,3 +4,8 @@
 # React Router
 /.react-router/
 /build/
+
+# Content and Images
+/app/data/
+/public/images/
+/public/thumbnails/
