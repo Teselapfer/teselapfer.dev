@@ -5,5 +5,6 @@ export default [
   route("profile", "pages/profile.tsx"),
   route("blog", "pages/blog.tsx"),
   route("blog/:slug", "pages/blog.$slug.tsx"),
+  route("photo", "pages/photo.tsx"),
   route("feature", "pages/feature.tsx"),
 ] satisfies RouteConfig;

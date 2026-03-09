@@ -19,6 +19,22 @@ const latestVideo = {
   id: "QhVEg7kbXoY",
 };
 
+// 1. 動的に画像を読み込むロジックを追加
+const imageModules = import.meta.glob("/public/images/*.{png,jpg,jpeg,webp}", {
+  eager: true,
+  query: "?url",
+});
+
+// 画像を配列に変換し、最新の3枚を取得（ファイル名順で降順にする場合）
+const latestPhotos = Object.entries(imageModules)
+  .map(([path, module], index) => ({
+    id: index,
+    url: (module as any).default || module,
+    path: path, // ソート用にパスを保持
+  }))
+  .sort((a, b) => b.path.localeCompare(a.path)) // ファイル名で降順ソート
+  .slice(0, 3); // 最初の3枚だけ取る
+
 export default function Welcome() {
   const allPosts = getPosts();
   const latestPosts = allPosts
@@ -66,8 +82,20 @@ export default function Welcome() {
           </div>
         </Section>
 
-        <Section title="激写！山口の暮らし" titleEng="PHOTOS">
+        <Section title="写真" titleEng="PHOTOS">
           <div>暮らしのひととき、刹那の記録。</div>
+          <div className={styles.photoPreviewGrid}>
+            {latestPhotos.map((photo) => (
+              <div key={photo.id} className={styles.photoWrapperSmall}>
+                <img src={photo.url} alt="" loading="lazy" />
+              </div>
+            ))}
+          </div>
+          <div className={styles.linkWrapper}>
+            <NavLink to={"/photo"} className={styles.link}>
+              写真を見る →
+            </NavLink>
+          </div>
         </Section>
       </ContentArea>
     </div>

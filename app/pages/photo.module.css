@@ -1,0 +1,43 @@
+.head {
+  font-size: 3em;
+}
+
+.description {
+  margin: 16px 0 24px;
+  color: #4b5563;
+}
+
+.photoGrid {
+  display: grid;
+  /* 1行に4つのカラム（均等幅）を作成 */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px; /* 写真の間の隙間 */
+  padding: 32px 0;
+}
+
+.photoWrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* どんな画像でも強制的に1:1の正方形にする */
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: var(--border-color); /* 読み込み前の下地 */
+}
+
+.photoWrapper img {
+  width: 100%;
+  height: 100%;
+  /* 重要：アスペクト比を維持したまま枠いっぱいに広げ、はみ出しをカット */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photoWrapper:hover img {
+  transform: scale(1.05); /* ホバー時のちょっとした演出 */
+}
+
+/* スマホ対応：画面が狭いときに4枚並ぶと小さすぎるため調整 */
+@media (max-width: 768px) {
+  .photoGrid {
+    grid-template-columns: repeat(2, 1fr); /* スマホでは1行2枚に */
+  }
+}
