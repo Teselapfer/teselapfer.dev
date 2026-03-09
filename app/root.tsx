@@ -11,6 +11,7 @@ import type { Route } from "./+types/root";
 import "./app.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { ThemeProvider } from "next-themes";
 
 // export const links: Route.LinksFunction = () => [
 //   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -36,11 +37,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <Header />
-        {children}
-        <ScrollRestoration />
-        <Scripts />
-        <Footer />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Header />
+          {children}
+          <ScrollRestoration />
+          <Scripts />
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

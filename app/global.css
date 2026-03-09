@@ -1,0 +1,26 @@
+/* ライトモード（デフォルト） */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111827;
+  --border-color: #f1f5f9;
+  --icon-filter: brightness(0) saturate(100%) invert(48%) sepia(11%)
+    saturate(554%) hue-rotate(182deg) brightness(87%) contrast(81%);
+}
+
+/* ダークモード */
+.dark {
+  --bg-color: #0f172a; /* 濃い紺色 */
+  --text-color: #f8fafc;
+  --border-color: #1e293b;
+  /* ダークモード時はアイコンを少し明るいグレーに */
+  --icon-filter: brightness(0) saturate(100%) invert(80%) sepia(5%)
+    saturate(500%) hue-rotate(180deg);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}

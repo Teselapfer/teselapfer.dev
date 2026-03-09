@@ -56,3 +56,124 @@
   background-color: rgba(0, 0, 0, 0.05);
   filter: brightness(0.5);
 }
+
+/* footer.module.css */
+
+.themeWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* システムボタンとトグルの間隔 */
+}
+
+/* システムボタン（独立） */
+.systemButton {
+  background: #f1f5f9;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  transition: all 0.2s ease;
+  opacity: 0.5;
+}
+
+.systemButton.active {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+}
+
+/* Light/Darkトグル（カプセル型） */
+.toggleTrack {
+  display: flex;
+  background-color: #f1f5f9;
+  padding: 2px;
+  border-radius: 20px; /* 丸いカプセル状 */
+  position: relative;
+  cursor: pointer;
+  border: none;
+}
+
+.toggleButton {
+  padding: 6px 12px;
+  border-radius: 18px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  transition: all 0.2s ease;
+  opacity: 0.4;
+}
+
+.toggleButton.active {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+}
+
+.themeIcon {
+  width: 16px;
+  height: 16px;
+}
+
+/* snsLinksのアイコンと同じ色にするための共通フィルタ */
+.iconFilter {
+  filter: brightness(0) saturate(100%) invert(48%) sepia(11%) saturate(554%)
+    hue-rotate(182deg) brightness(87%) contrast(81%);
+}
+
+/* トグル全体を包む背景を消す、または目立たなくしてアイコン主役にする場合 */
+.toggleTrack,
+.systemButton {
+  background: transparent; /* 背景をsnsLinksと同じ透明に */
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+/* システムボタン単体と、トグル内の各ボタンの設定 */
+.systemButton,
+.toggleButton {
+  padding: 8px; /* .link と同じパディング */
+  display: flex;
+  align-items: center;
+  opacity: 1; /* opacityではなくfilterで制御 */
+}
+
+/* 非アクティブ時のアイコン色 */
+.themeIcon {
+  width: 16px;
+  height: 16px;
+  composes: iconFilter; /* 上記のフィルタを適用 */
+  transition: filter 0.3s ease;
+}
+
+/* ホバー時の挙動を .link に合わせる */
+.systemButton:hover,
+.toggleButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.systemButton:hover .themeIcon,
+.toggleButton:hover .themeIcon {
+  filter: brightness(0.5); /* ホバー時に少し暗く */
+}
+
+/* アクティブ（選択中）の時の見た目 */
+/* 下線を入れるか、色を濃くするか、オレンジ（テーマ色）にするのがおすすめ */
+.systemButton.active .themeIcon,
+.toggleButton.active .themeIcon {
+  filter: brightness(0) saturate(100%) invert(68%) sepia(45%) saturate(542%)
+    hue-rotate(345deg) brightness(96%) contrast(91%); /* 例：オレンジ系 */
+  /* もしシンプルに黒くしたいなら brightness(0) */
+}
+
+/* カプセル状の背景が必要ない場合は toggleTrack の背景も透明にします */
+.toggleTrack {
+  display: flex;
+  gap: 2px;
+  background: transparent;
+}
